@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00e16f0575d73480ebe7b76bb4ae3939, type: 3}
-  m_Name: Build
+  m_Name: Navigate
   m_EditorClassIdentifier: 
   m_Parameters:
   - m_Name: builder
     m_RequiredTraits:
-    - {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074, type: 2}
     - {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d, type: 2}
+    - {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074, type: 2}
     m_ProhibitedTraits: []
   - m_Name: buildbase
     m_RequiredTraits:
@@ -25,15 +25,9 @@ MonoBehaviour:
     m_ProhibitedTraits: []
   m_Preconditions:
   - m_OperandA:
-    - buildbase
-    - BuildBase.Progress
-    m_Operator: <=
-    m_OperandB:
-    - 1
-  - m_OperandA:
     - builder
     - Location.Position
-    m_Operator: ==
+    m_Operator: '!='
     m_OperandB:
     - buildbase
     - Location.Position
@@ -41,13 +35,14 @@ MonoBehaviour:
   m_RemovedObjects: []
   m_Effects:
   - m_OperandA:
-    - buildbase
-    - BuildBase.Progress
-    m_Operator: +=
+    - builder
+    - Location.Position
+    m_Operator: =
     m_OperandB:
-    - 1
-  m_Reward: 1
-  m_OperationalActionType: BuildAction
+    - buildbase
+    - Location.Position
+  m_Reward: -1
+  m_OperationalActionType: NavigationAction
   m_CustomEffect: 
   m_CustomReward: 
   m_CustomPrecondition: 

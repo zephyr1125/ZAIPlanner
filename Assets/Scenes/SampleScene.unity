@@ -168,6 +168,15 @@ MonoBehaviour:
         m_IntValue: 0
         m_StringValue: 
         m_ObjectValue: {fileID: 389181773}
+    - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
+        type: 2}
+      m_FieldValues:
+      - m_Name: Transform
+        m_BoolValue: 0
+        m_FloatValue: 0
+        m_IntValue: 0
+        m_StringValue: 
+        m_ObjectValue: {fileID: 389181773}
 --- !u!136 &389181770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -256,6 +265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InitialStateTraitData:
   - m_TraitDefinition: {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d,
+      type: 2}
+    m_FieldValues: []
+  - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
       type: 2}
     m_FieldValues: []
   m_PlanningDefinition: {fileID: 11400000, guid: 6f558413e8c74904a80374e1ed1bbff4,
