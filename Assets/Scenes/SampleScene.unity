@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -159,7 +159,7 @@ MonoBehaviour:
     - m_TraitDefinition: {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d,
         type: 2}
       m_FieldValues: []
-    - m_TraitDefinition: {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074,
+    - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
         type: 2}
       m_FieldValues:
       - m_Name: Transform
@@ -168,7 +168,7 @@ MonoBehaviour:
         m_IntValue: 0
         m_StringValue: 
         m_ObjectValue: {fileID: 389181773}
-    - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
+    - m_TraitDefinition: {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074,
         type: 2}
       m_FieldValues:
       - m_Name: Transform
@@ -264,10 +264,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InitialStateTraitData:
-  - m_TraitDefinition: {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d,
+  - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
       type: 2}
     m_FieldValues: []
-  - m_TraitDefinition: {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642,
+  - m_TraitDefinition: {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d,
       type: 2}
     m_FieldValues: []
   m_PlanningDefinition: {fileID: 11400000, guid: 6f558413e8c74904a80374e1ed1bbff4,
@@ -345,7 +345,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 8.56e-43, y: 2.3834993e+9, z: 4.5905e-41, w: 2.3832822e+9}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
