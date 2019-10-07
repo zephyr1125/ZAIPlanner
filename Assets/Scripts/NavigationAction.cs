@@ -9,12 +9,12 @@ public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionK
     private Vector3 _targetPosition;
     private Transform _agentTransform;
     private bool _arrived;
-        
+
     public void BeginExecution(StateData state, ActionKey action, CharAgent agent)
     {
         _targetPosition = state.GetTraitOnObjectAtIndex<Location>(action[1]).Position;
         _agentTransform = agent.transform;
-        
+
         _agentTransform.LookAt(_targetPosition);
 
         _arrived = false;
@@ -23,7 +23,7 @@ public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionK
     public void ContinueExecution(StateData state, ActionKey action, CharAgent agent)
     {
         _agentTransform.LookAt(_targetPosition);
-        
+
         var position = _agentTransform.position;
         var newPosition = position + _agentTransform.forward * WalkSpeed;
         _agentTransform.position = newPosition;
@@ -41,7 +41,8 @@ public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionK
 
     public OperationalActionStatus Status(StateData state, ActionKey action, CharAgent agent)
     {
-        return _arrived ? OperationalActionStatus.Completed :
-            OperationalActionStatus.InProgress;
+        return _arrived
+            ? OperationalActionStatus.Completed
+            : OperationalActionStatus.InProgress;
     }
 }
