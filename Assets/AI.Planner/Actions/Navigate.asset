@@ -13,33 +13,32 @@ MonoBehaviour:
   m_Name: Navigate
   m_EditorClassIdentifier: 
   m_Parameters:
-  - m_Name: builder
+  - m_Name: agent
     m_RequiredTraits:
-    - {fileID: 11400000, guid: 023b5405032e0a7419d229e965787c8d, type: 2}
+    - {fileID: 11400000, guid: ed2cdbf56f1effc4a8e7c78c70a56642, type: 2}
     - {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074, type: 2}
     m_ProhibitedTraits: []
-  - m_Name: buildbase
+  - m_Name: target
     m_RequiredTraits:
-    - {fileID: 11400000, guid: 260d8894b3eadc648b3487a27280ba77, type: 2}
     - {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074, type: 2}
     m_ProhibitedTraits: []
   m_Preconditions:
   - m_OperandA:
-    - builder
+    - agent
     - Location.Position
     m_Operator: '!='
     m_OperandB:
-    - buildbase
+    - target
     - Location.Position
   m_CreatedObjects: []
   m_RemovedObjects: []
   m_Effects:
   - m_OperandA:
-    - builder
+    - agent
     - Location.Position
     m_Operator: =
     m_OperandB:
-    - buildbase
+    - target
     - Location.Position
   m_Reward: -1
   m_OperationalActionType: NavigationAction

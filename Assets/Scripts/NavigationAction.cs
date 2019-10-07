@@ -1,3 +1,4 @@
+using AI.Planner.Actions.Custom;
 using AI.Planner.Domains;
 using Unity.AI.Planner.Agent;
 using Unity.AI.Planner.DomainLanguage.TraitBased;
@@ -5,7 +6,6 @@ using UnityEngine;
 
 public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionKey>
 {
-    private const float WalkingSpeed = 0.3f;
     private Vector3 _targetPosition;
     private Transform _agentTransform;
     private bool _arrived;
@@ -25,7 +25,7 @@ public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionK
         _agentTransform.LookAt(_targetPosition);
         
         var position = _agentTransform.position;
-        var newPosition = position + _agentTransform.forward * WalkingSpeed;
+        var newPosition = position + _agentTransform.forward * Const.WalkingSpeed;
         _agentTransform.position = newPosition;
 
         _arrived = Vector3.Distance(newPosition, _targetPosition) <= 0.1;
