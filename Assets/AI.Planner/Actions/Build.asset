@@ -27,7 +27,7 @@ MonoBehaviour:
   - m_OperandA:
     - buildbase
     - BuildBase.Progress
-    m_Operator: <=
+    m_Operator: <
     m_OperandB:
     - 1
   - m_OperandA:

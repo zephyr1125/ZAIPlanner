@@ -25,10 +25,18 @@ public class NavigationAction : IOperationalAction<CharAgent, StateData, ActionK
         _agentTransform.LookAt(_targetPosition);
 
         var position = _agentTransform.position;
-        var newPosition = position + _agentTransform.forward * WalkSpeed;
-        _agentTransform.position = newPosition;
+        _arrived = Vector3.Distance(_targetPosition, position) <= WalkSpeed;
+        Vector3 newPosition;
+        if (_arrived)
+        {
+            newPosition = _targetPosition;
+        }
+        else
+        {
+            newPosition = position + _agentTransform.forward * WalkSpeed;
+        }
 
-        _arrived = Vector3.Distance(newPosition, _targetPosition) <= 0.1;
+        _agentTransform.position = newPosition;
     }
 
     public void EndExecution(StateData state, ActionKey action, CharAgent agent)

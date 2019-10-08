@@ -17,7 +17,9 @@ public class BuildAction : IOperationalAction<CharAgent, StateData, ActionKey>
 
     public void EndExecution(StateData state, ActionKey action, CharAgent agent)
     {
-        
+        var buildBase = state.GetTraitOnObjectAtIndex<BuildBase>(action[1]);
+        buildBase.Progress = 1;
+        state.SetTraitOnObjectAtIndex(buildBase, action[1]);
     }
 
     public OperationalActionStatus Status(StateData state, ActionKey action, CharAgent agent)
